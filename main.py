@@ -13,32 +13,33 @@ specialcharacter = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
                       '-', '_', '+', '=', ',', '.', '/', '?']
 
 
-def choicepersection():
-    lowercharacternum = random.randint(0, 7)
-    uppercharacternum = random.randint(0, 6)
-    specialcharacternum = random.randint(0, 5)
-    
-def characterspersection(lowercharacternum, uppercharacternum, specialcharacternum):
-        for i in range(lowercharacternum):
-            lowercharacterchoice = str(random.choice(lowercharacters))
-        for i in range(uppercharacternum):
-            uppercharacterchoice = str(random.choice(uppercharacternum))
-        for i in range(specialcharacternum):
-            specialcharacterchoice = str(random.choice(specialcharacter))
+
+lowercharacternum = random.randint(0, 7)
+
+uppercharacternum = random.randint(0, 6)
+
+specialcharacternum = random.randint(0, 5)
+
+
+for i in range(lowercharacternum):
+  lowercharacterchoice = str(random.choice(lowercharacters))
+
+for i in range(uppercharacternum):
+  uppercharacterchoice = random.choice(uppercharacternum)
+  
+for i in range(specialcharacternum):
+  specialcharacterchoice = str(random.choice(specialcharacter))
+ 
             
              
-def passwordcreation(lowercharacterchoice, uppercharacterchoise, specialcharacterchoice):
-    orderedpassword = lowercharacterchoice + uppercharacterchoise + specialcharacterchoice
-    shuffledpassword = random.shuffle(orderedpassword)
-    return shuffledpassword
+
+orderedpassword = lowercharacterchoice + uppercharacterchoice + specialcharacterchoice
+shuffledpassword = random.shuffle(orderedpassword)
+print(shuffledpassword)
     
 
     
 
-def run(shuffledpassword):
-    choicepersection()
-    characterspersection()
-    passwordcreation()
-    print(shuffledpassword)
+
     
-run()
+

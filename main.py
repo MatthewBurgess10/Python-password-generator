@@ -3,7 +3,9 @@ import random
 lowercharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
                    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
                    "u", "v", "w", "x", "y", "z"]
-uppercharacter = [chr(i) for i in range(ord('A'), ord('Z')+1)]
+uppercharacter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+                  "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
+                  "U", "V", "W", "X", "Y", "Z"]
     #The ord function gets Unicode starting character of a and ending character of z, then it loops through from a to z 
     #thereby getting all the letters of the alphabet
     
@@ -14,28 +16,28 @@ specialcharacter = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
 
 
 
-lowercharacternum = random.randint(0, 7)
+lowercharacternum = random.randint(1, 7)
 
-uppercharacternum = random.randint(0, 6)
+uppercharacternum = random.randint(1, 6)
 
-specialcharacternum = random.randint(0, 5)
+specialcharacternum = random.randint(1, 5)
 
 
-for i in range(lowercharacternum):
-  lowercharacterchoice = str(random.choice(lowercharacters))
+for i in range(0,lowercharacternum):
+  lowercharacterchoice = random.choice(str(lowercharacters))
 
-for i in range(uppercharacternum):
-  uppercharacterchoice = random.choice(uppercharacternum)
+for i in range(0,uppercharacternum):
+  uppercharacterchoice = random.choice(str(uppercharacter))
   
-for i in range(specialcharacternum):
-  specialcharacterchoice = str(random.choice(specialcharacter))
+for i in range(0,specialcharacternum):
+  specialcharacterchoice = random.choice(str(specialcharacter))
  
             
              
 
 orderedpassword = lowercharacterchoice + uppercharacterchoice + specialcharacterchoice
-shuffledpassword = random.shuffle(orderedpassword)
-print(shuffledpassword)
+print(orderedpassword)
+
     
 
     

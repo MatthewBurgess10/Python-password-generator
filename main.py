@@ -6,21 +6,17 @@ lowercharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
 uppercharacter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
                   "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
                   "U", "V", "W", "X", "Y", "Z"]
-    #The ord function gets Unicode starting character of a and ending character of z, then it loops through from a to z 
-    #thereby getting all the letters of the alphabet
+    
     
 
 
-specialcharacter = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
-                      '-', '_', '+', '=', ',', '.', '/', '?']
 
 
+lowercharacternum = random.randint(1, 15)
 
-lowercharacternum = random.randint(1, 7)
+uppercharacternum = random.randint(1, 15)
 
-uppercharacternum = random.randint(1, 6)
-
-specialcharacternum = random.randint(1, 5)
+specialcharacternum = random.randint(1, 15)
 
 
 for i in range(0,lowercharacternum):
@@ -29,18 +25,16 @@ for i in range(0,lowercharacternum):
 for i in range(0,uppercharacternum):
   uppercharacterchoice = random.choice(str(uppercharacter))
   
-for i in range(0,specialcharacternum):
-  specialcharacterchoice = random.choice(str(specialcharacter))
+#for i in range(0,specialcharacternum):
+  #specialcharacterchoice = random.choice(str(specialcharacter))
  
             
              
 
-orderedpassword = lowercharacterchoice + uppercharacterchoice + specialcharacterchoice
-print(orderedpassword)
+orderedpassword = lowercharacterchoice + uppercharacterchoice #+ specialcharacterchoice
 
-    
-
-    
+shuffledstring = ''.join(random.sample(orderedpassword, len(orderedpassword)))
+print(shuffledstring)
 
 
     

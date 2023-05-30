@@ -9,7 +9,7 @@ def generation(length):
 
 length = int(input('Enter the length of the password: '))
 password = generation(length)
-print('Your password is {}'.format(password))
+print('Your password is: {0}'.format(password))
 
 
     
